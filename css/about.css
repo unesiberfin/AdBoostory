@@ -1,0 +1,448 @@
+/* ==== ROCKET SCROLL ANIMATION ==== */
+
+.hero-rocket-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.hero-rocket {
+  position: absolute;
+  width: 140px;
+  transform: translateX(0px);
+  transition: transform 0.1s linear;
+  z-index: 1;
+  opacity: .75;
+
+}
+
+
+.hero-center-banner {
+    padding-top: 120px;
+    padding-bottom: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-title {
+    font-family: "Inter", serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 200px;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+
+  }
+  
+
+  /* ====scroll button===== */
+  .scroll-indicator {
+    display: flex;
+    justify-content: center;
+    margin: 120px 0;
+  }
+  
+  .arrow-circle {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #2721f6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatArrow 2s ease-in-out infinite;
+  }
+  
+  .arrow-down {
+    font-size: 28px;
+    color: #ffffff;
+    transform: translateY(2px);
+  }
+  
+  /* Floating animation */
+  @keyframes floatArrow {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .arrow-circle:hover {
+    border-color: #2721f6;
+    box-shadow: 0 0 15px rgba(39, 33, 246, 0.4);
+  }
+  
+  
+  /* =======================
+     MARQUEE SLIDER
+  ======================= */
+  .hero-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .marquee-track {
+    display: flex;
+    gap: 40px;
+    margin-top: 90px;
+    margin-bottom: 0;
+    animation: scrollLeft 20s linear infinite;
+    padding-bottom: 10px; /*fixes card overflow */
+  }
+  
+  /* Makes it loop infinitely */
+  @keyframes scrollLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  
+  /* =======================
+     CARDS
+  ======================= */
+  .hero-card {
+    width: 380px;
+    height: 440px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 50px;
+  
+    /* Glass style */
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.3);
+  
+    transition: transform 0.4s ease, filter 0.3s ease;
+  }
+  
+  .hero-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Hover effect: bigger + slows down marquee */
+  .hero-card:hover {
+    transform: scale(1.1) translateY(-6px);
+    z-index: 5;
+  }
+  
+  
+  /* Floating cards on right */
+  .about-hero-right {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-card-stack {
+    position: relative;
+    width: 380px;
+    height: 500px;
+  }
+  
+  .about-card {
+    position: absolute;
+    width: 260px;
+    height: 340px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+  
+  .about-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ac-1 {
+    top: 0;
+    left: 40px;
+    transform: rotate(-6deg);
+    z-index: 3;
+  }
+  
+  .ac-2 {
+    top: 90px;
+    left: 120px;
+    transform: rotate(5deg);
+    z-index: 2;
+  }
+  
+  .ac-3 {
+    top: 200px;
+    left: 10px;
+    transform: rotate(-3deg);
+    z-index: 1;
+  }
+  
+  .about-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    z-index: 10;
+  }
+  
+  
+  /* ====== Our Story ====== */
+  .about-story {
+    padding: 40px 10% 40px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .story-card {
+    max-width: 800px;
+    padding: 40px 40px 30px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #ffffff;
+  }
+  
+  .story-card h2 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+  
+  .story-card p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 12px;
+  }
+  
+  
+  /* ====== Why Choose Us ====== */
+  .why-choose {
+    padding: 20px 10% 80px;
+    background-color: #000;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .why-choose h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .why-subtitle {
+    color: #b5b5ff;
+    margin-bottom: 50px;
+  }
+  
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+  }
+  
+  .why-card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 50px 24px;
+    text-align: left;
+    border: 1px solid rgba(255,255,255,0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .why-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .why-card p {
+    font-size: 0.95rem;
+    color: #dcdcdc;
+  }
+  
+  .why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.4);
+    border-color: #2721f6;
+  }
+  
+
+
+/* ===================== WHAT WE DO ===================== */
+.what-we-do {
+    padding: 80px 8%;
+    color: #fff;
+  }
+  
+  .what-we-do h2 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 35px;
+  }
+  
+  /* Each row */
+  .wwd-row {
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 28px;
+    position: relative;
+  }
+  
+  /* Track that slides */
+  .wwd-track {
+    display: inline-flex;
+    gap: 26px;
+    align-items: center;
+  }
+  
+  /* Items */
+  .wwd-item {
+    flex: 0 0 auto;
+    background: rgba(255,255,255,0.06);
+    padding: 18px 28px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  /* Hover scaling */
+  /* .wwd-item:hover {
+    transform: scale(1.08);
+    background: rgba(39,33,246,0.3);
+  } */
+  
+  /* Row 1 slides LEFT */
+  .row-left .wwd-track {
+    animation: marqueeLeft 18s linear infinite;
+  }
+  
+  /* Row 2 slides RIGHT */
+  .row-right .wwd-track {
+    animation: marqueeRight 22s linear infinite;
+  }
+  
+  /* Keyframes */
+  @keyframes marqueeLeft {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  
+  @keyframes marqueeRight {
+    from { transform: translateX(0); }
+    to   { transform: translateX(50%); }
+  }
+  
+  /* Pause scroll on hover */
+  .wwd-row:hover .wwd-track {
+    animation-play-state: paused;
+  }
+
+  
+
+  
+  /* =============================== About CTA ============== */
+  .about-cta {
+    padding: 80px 10% 120px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-cta-card {
+    max-width: 700px;
+    width: 100%;
+    padding: 40px 34px;
+    border-radius: 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(14px);
+    text-align: center;
+    color: #fff;
+  }
+  
+  .about-cta-card h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+  }
+  
+  .about-cta-card p {
+    font-size: 0.98rem;
+    color: #e0e0e0;
+    margin-bottom: 22px;
+  }
+  
+  .about-cta-card .cta-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  
+
+  /* ====== REVEAL ON SCROLL (medium animation) ====== */
+  
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  
+  .reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+  
+  /* ====== RESPONSIVE ====== */
+  @media (max-width: 900px) {
+    .about-hero {
+      flex-direction: column;
+      padding: 140px 6% 80px;
+    }
+  
+    .about-hero-left,
+    .about-hero-right {
+      width: 100%;
+    }
+  
+    .about-card-stack {
+      width: 100%;
+      max-width: 360px;
+      height: 440px;
+    }
+  
+    .team-member,
+    .team-member.reverse {
+      flex-direction: column;
+    }
+  
+    .team-photo-wrap {
+      flex: 0 0 auto;
+    }
+  }
+  
+
+  

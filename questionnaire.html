@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdBoostory | Home</title>
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/questionnaire.css" />
+  
+  
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="images/adb-blue-transparent.png" class="logo" />
+    </div>
+
+    <nav class="nav-center">
+      <a href="home.html" class="active">Home</a>
+      <a href="home.html#contact">Contact</a>
+      <a href="our-work.html">Our Work</a>
+      <a href="about.html">About Us</a>
+    </nav>
+
+    <div class="nav-right">
+      <a href="questionnaire.html" class="contact-btn">Get a Free Quote</a>
+    </div>
+  </header>
+
+
+
+<section id="contact" class="contact-section">
+  <h2 class="contact-title">Get a Custom Quote</h2>
+  <p class="contact-subtext">
+    Tell us about your business in a few quick questions. We’ll review your answers and send a tailored quote.
+  </p>
+
+  <form
+  id="quoteForm"
+  action="https://formsubmit.co/marketing.adboostory@gmail.com"
+  method="POST"
+  class="contact-form"
+>
+  <!-- FormSubmit options -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_subject" value="New Quote Request – AdBoostory">
+
+  <!-- 🔁 Redirect here after successful submit -->
+  <input
+    type="hidden"
+    name="_next"
+    value="https://adboostory.com/thank-you.html"
+  />
+
+
+
+    <!-- 1) Contact & business -->
+    <input
+      type="text"
+      name="Full Name"
+      placeholder="Full Name *"
+      required
+    />
+
+    <input
+      type="text"
+      name="Business Name"
+      placeholder="Business Name *"
+      required
+    />
+
+    <input
+      type="email"
+      name="Email"
+      placeholder="Email Address *"
+      required
+    />
+
+    <input
+      type="text"
+      name="Phone"
+      placeholder="Phone Number (optional)"
+    />
+
+    <!-- 2) Location & links -->
+    <input
+      type="text"
+      name="Business Location"
+      placeholder="Business Location (City / Neighbourhood) *"
+      required
+    />
+
+    <textarea
+      name="Website & Social Links"
+      placeholder="Website / Instagram / TikTok links (if any)"
+    ></textarea>
+
+    <!-- 3) About your business -->
+    <textarea
+      name="About Your Business"
+      placeholder="Describe your restaurant/brand in 1–2 sentences *"
+      required
+    ></textarea>
+
+    <!-- 4) Ideal customer -->
+    <textarea
+      name="Ideal Customer"
+      placeholder="Who is your ideal customer? (age range, lifestyle, what they care about)"
+    ></textarea>
+
+    <!-- 5) Current social media situation -->
+    <textarea
+      name="Current Platforms"
+      placeholder="Which platforms are you currently using? (Instagram, TikTok, Facebook, Google Business, etc.)"
+    ></textarea>
+
+    <label
+      for="Posting Frequency"
+      style="text-align:left; font-size:0.9rem; opacity:0.8;"
+    >
+      How often do you post right now?
+    </label>
+    <select name="Posting Frequency" id="Posting Frequency">
+      <option value="rarely">Rarely</option>
+      <option value="monthly">1–3 times per month</option>
+      <option value="weekly">1–2 times per week</option>
+      <option value="several-week">3–5 times per week</option>
+      <option value="daily">Daily</option>
+    </select>
+
+    <!-- 6) Main challenges -->
+    <textarea
+      name="Main Challenges"
+      placeholder="What are you currently struggling with the most? * (e.g., no time to post, low engagement, low-quality content, no clear strategy, ads not working)"
+      required
+    ></textarea>
+
+    <!-- 7) Goals (3–6 months) -->
+    <textarea
+      name="Goals (3–6 Months)"
+      placeholder="What are your top goals for the next 3–6 months? * (more bookings, more walk-ins, stronger brand, promote delivery, etc.)"
+      required
+    ></textarea>
+
+    <!-- 8) Preferred support level -->
+    <label
+      for="Support Level"
+      style="text-align:left; font-size:0.9rem; opacity:0.8;"
+    >
+      What level of support sounds closest to what you need? *
+    </label>
+    <select name="Preferred Support Level" id="Support Level" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="essential">
+        Essential presence – consistent posts so pages look active
+      </option>
+      <option value="growth">
+        Growth focus – content + engagement + strategy
+      </option>
+      <option value="performance">
+        Performance focus – content + engagement + paid ads for results
+      </option>
+    </select>
+
+    <!-- 9) Budget & timeline -->
+    <label
+      for="Budget"
+      style="text-align:left; font-size:0.9rem; opacity:0.8;"
+    >
+      Approximate monthly marketing budget (CAD) *
+    </label>
+    <select name="Monthly Budget" id="Budget" required>
+      <option value="" disabled selected>Select a range</option>
+      <option value="<500">&lt; $500</option>
+      <option value="500-1000">$500–$1,000</option>
+      <option value="1000-2500">$1,000–$2,500</option>
+      <option value="2500+">$2,500+</option>
+      <option value="unsure">Not sure yet</option>
+    </select>
+
+    <label
+      for="Start Timeline"
+      style="text-align:left; font-size:0.9rem; opacity:0.8;"
+    >
+      When would you like to start? *
+    </label>
+    <select name="Start Timeline" id="Start Timeline" required>
+      <option value="" disabled selected>Select one</option>
+      <option value="asap">ASAP</option>
+      <option value="1-month">Within 1 month</option>
+      <option value="1-3-months">1–3 months</option>
+      <option value="exploring">Just exploring options</option>
+    </select>
+
+    <!-- 10) Anything else -->
+    <textarea
+      name="Additional Notes"
+      placeholder="Is there anything else we should know before we prepare your quote? (expectations, previous agency experience, special notes)"
+    ></textarea>
+
+    <button type="submit" class="btn-primary">
+        Submit & Get My Quote
+      </button>
+
+    <!-- Status message placeholder (if you use it in JS) -->
+    <div id="formStatus" class="form-status"></div>
+  </form>
+</section>
+
+
+
+  
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+    <p>AdBoostory © 2025</p>
+  
+    <div class="socials">
+      <a href="https://www.tiktok.com/@adboostory?_r=1&_t=ZS-91Nue9KHG9C" target="_blank" class="social-icon">
+        <!-- TikTok SVG -->
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="white">
+          <path d="M34 2c.3 4 2 7 6 7v8c-3 .2-6-1-9-3v13c0 9-6 14-14 14S3 36 3 27s6-15 14-15v8c-3 0-6 2-6 7s3 7 6 7 6-2 6-7V2h11z"/>
+        </svg>
+      </a>
+  
+      <a href="https://www.instagram.com/adboostory/" target="_blank" class="social-icon">
+        <!-- Instagram SVG -->
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="white">
+          <path d="M16 4h16c6 0 12 6 12 12v16c0 6-6 12-12 12H16C10 44 4 38 4 32V16C4 10 10 4 16 4z"/>
+          <circle cx="24" cy="24" r="10" fill="none" stroke="black" stroke-width="4"/>
+          <circle cx="35" cy="13" r="3"/>
+        </svg>
+      </a>
+  
+      <a href="mailto:marketing.adboostory@gmail.com" class="social-icon">
+        <!-- Gmail SVG -->
+        <svg width="26" height="26" viewBox="0 0 48 48" fill="white">
+          <path d="M4 12v24c0 2 2 4 4 4h32c2 0 4-2 4-4V12l-20 14L4 12z"/>
+          <path d="M44 12c0-2-2-4-4-4H8c-2 0-4 2-4 4l20 14L44 12z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+<!-- Thank You Popup -->
+
+
+<script src="js/questionnaire.js"></script>
+
+</body>
+</html>

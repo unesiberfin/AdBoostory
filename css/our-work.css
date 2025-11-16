@@ -1,0 +1,193 @@
+
+/* ================= GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+.nav-left .logo {
+  height: 28px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-center a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: #2721f6;
+}
+
+.contact-btn {
+  color: #efefef;
+  border: 2px solid #2721f6;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background: #2721f6;
+  color: #fff;
+}
+
+
+
+/* ================= NAVBAR ================= */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  z-index: 100;
+}
+
+.nav-left .logo {
+  height: 28px;
+}
+
+.nav-center {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-center a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-center a:hover,
+.nav-center a.active {
+  color: #2721f6;
+}
+
+.contact-btn {
+  color: #efefef;
+  border: 2px solid #2721f6;
+  padding: 10px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.contact-btn:hover {
+  background: #2721f6;
+  color: #fff;
+}
+
+/* Hero  */
+
+
+
+.hero-work-section {
+  min-height: 860vh; /* Make it a large hero section */
+  padding: 60px 0;
+  overflow: hidden; /* Crucial to hide the elements that shift outside the viewport */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.main-heading {
+  margin-top: 10%;
+  font-size: 4.5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+/* Horizontal Gallery Layout */
+.photo-gallery-wrapper {
+  width: 100%;
+  /* Creates a small offset to allow the gallery to move */
+  padding-left: 5%; 
+  padding-right: 5%;
+}
+
+.photo-gallery {
+    display: flex;
+    gap: 20px;
+    width: fit-content;
+    
+    /* NEW: Center the gallery so the middle projects are visible first */
+    transform: translateX(-50%); 
+    
+    transition: transform 0.1s ease-out; 
+    will-change: transform;
+}
+
+
+
+.photo-item {
+  width: 200px; /* Adjust size */
+  height: 300px; /* Vertical orientation */
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  padding: 40px;
+  text-align: center;
+  color: #aaa;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+

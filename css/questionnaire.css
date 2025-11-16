@@ -1,0 +1,34 @@
+/* Make dropdowns match the input style */
+.contact-form select {
+  padding: 14px 18px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+
+  /* Remove default OS styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Custom arrow */
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23FFFFFF' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px 8px;
+}
+
+/* Optional: focus glow like a button */
+.contact-form select:focus {
+  box-shadow: 0 0 0 2px rgba(39, 33, 246, 0.7); /* #2721F6 */
+}
+
+/* Optional: greyed-out placeholder option */
+.contact-form select option[disabled] {
+  color: rgba(255, 255, 255, 0.45);
+}
+
