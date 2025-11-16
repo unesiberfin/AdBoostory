@@ -1,31 +1,73 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const gallery = document.getElementById('interactive-gallery');
-    const wrapper = gallery.parentElement;
-
-    // Define the initial offset set in CSS (e.g., -50%)
-    const initialOffset = -50; // Represents -50% translation
-
-    wrapper.addEventListener('mousemove', (e) => {
-        const wrapperRect = wrapper.getBoundingClientRect();
-        const mouseX = e.clientX - wrapperRect.left; 
-
-        // Normalized percentage (0 to 1)
-        const percentageX = mouseX / wrapperRect.width - 0.5; 
-
-        // Define the maximum shift amount (e.g., 50 pixels)
-        const maxShift = 50; 
-        
-        // Calculate the pixel shift based on mouse
-        const mouseShiftX = -percentageX * maxShift; 
-
-        // COMBINE the initial -50% shift with the new pixel shift
-        // Using a percentage transform for the initial offset is easier to manage a long list
-        // Note: For simplicity and better control, we'll keep the mouseShiftX in pixels
-        gallery.style.transform = `translateX(calc(${initialOffset}% + ${mouseShiftX}px))`;
+document.addEventListener("DOMContentLoaded", () => {
+    const track = document.querySelector(".portfolio-carousel-track");
+    const cards = Array.from(document.querySelectorAll(".portfolio-card"));
+    const prevBtn = document.querySelector(".carousel-arrow--left");
+    const nextBtn = document.querySelector(".carousel-arrow--right");
+  
+    if (!track || cards.length === 0) return;
+  
+    let activeIndex = 0;
+    const total = cards.length;
+  
+    function updateCarousel() {
+      cards.forEach((card, i) => {
+        let offset = i - activeIndex;
+  
+        // Wrap around so it behaves like a loop
+        if (offset > total / 2) offset -= total;
+        if (offset < -total / 2) offset += total;
+  
+        const abs = Math.abs(offset);
+  
+        const baseX = 260; // horizontal spacing in px
+        const x = offset * baseX;
+  
+        const scale = 1 - Math.min(abs * 0.15, 0.45); // 1, 0.85, 0.7...
+        const opacity = abs > 2 ? 0 : 1 - abs * 0.25;
+  
+        card.style.transform = `translateX(${x}px) scale(${scale})`;
+        card.style.zIndex = String(100 - abs);
+        card.style.opacity = opacity;
+        card.style.pointerEvents = abs === 0 ? "auto" : "none";
+      });
+    }
+  
+    function goNext() {
+      activeIndex = (activeIndex + 1 + total) % total;
+      updateCarousel();
+    }
+  
+    function goPrev() {
+      activeIndex = (activeIndex - 1 + total) % total;
+      updateCarousel();
+    }
+  
+    // Buttons
+    if (nextBtn) nextBtn.addEventListener("click", goNext);
+    if (prevBtn) prevBtn.addEventListener("click", goPrev);
+  
+    // Simple drag / swipe support
+    let startX = 0;
+    let isDragging = false;
+  
+    track.addEventListener("pointerdown", (e) => {
+      isDragging = true;
+      startX = e.clientX;
     });
-
-    wrapper.addEventListener('mouseleave', () => {
-        // When mouse leaves, return to the initial centered position
-        gallery.style.transform = `translateX(${initialOffset}%)`;
+  
+    window.addEventListener("pointerup", (e) => {
+      if (!isDragging) return;
+      const diff = e.clientX - startX;
+      if (Math.abs(diff) > 60) {
+        if (diff < 0) {
+          goNext();
+        } else {
+          goPrev();
+        }
+      }
+      isDragging = false;
     });
-});
+  
+    updateCarousel();
+  });
+  
