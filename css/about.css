@@ -101,14 +101,17 @@
     gap: 40px;
     margin-top: 90px;
     margin-bottom: 0;
-    animation: scrollLeft 20s linear infinite;
+    /* Span distance set in JS based on original card set width */
+    --marquee-span: 50%;
+    --marquee-duration: 20s;
+    animation: scrollLeft var(--marquee-duration) linear infinite;
     padding-bottom: 10px; /*fixes card overflow */
   }
-  
+
   /* Makes it loop infinitely */
   @keyframes scrollLeft {
     from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+    to   { transform: translateX(calc(-1 * var(--marquee-span))); }
   }
   
   /* =======================

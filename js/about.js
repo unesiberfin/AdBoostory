@@ -34,3 +34,23 @@ if (aboutHero && heroRocket) {
   window.addEventListener("scroll", updateRocket);
   window.addEventListener("resize", updateRocket);
 }
+
+// ===== Continuous marquee for hero cards =====
+const marqueeTrack = document.querySelector(".marquee-track");
+
+if (marqueeTrack) {
+  const originalCards = Array.from(marqueeTrack.children);
+  const originalWidth = marqueeTrack.scrollWidth;
+
+  // Duplicate cards until we have at least two full sets to prevent gaps
+  while (marqueeTrack.scrollWidth < originalWidth * 2) {
+    originalCards.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.setAttribute("aria-hidden", "true");
+      marqueeTrack.appendChild(clone);
+    });
+  }
+
+  // Match animation distance to the width of the original set for a seamless loop
+  marqueeTrack.style.setProperty("--marquee-span", `${originalWidth}px`);
+}
