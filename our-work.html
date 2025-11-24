@@ -14,21 +14,33 @@
 <!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="nav-left">
-    <img src="images/adb-blue-transparent.png" class="logo"/>
+    <img src="images/adb-blue-transparent.png" class="logo" />
   </div>
 
+  <!-- Hidden checkbox for CSS-only toggle -->
+  <input type="checkbox" id="nav-toggle" class="nav-checkbox" aria-hidden="true" />
+
+  <!-- Hamburger button -->
+  <label for="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+
   <nav class="nav-center">
-    <a href="home.html">Home</a>
+    <a href="home.html" class="active">Home</a>
     <a href="home.html#contact">Contact</a>
-    <a href="our-work.html" class="active">Our Work</a>
+    <a href="our-work.html">Our Work</a>
     <a href="about.html">About Us</a>
   </nav>
 
   <div class="nav-right">
-    <!-- From this page we want to jump to the contact section on home -->
     <a href="questionnaire.html" class="contact-btn">Get a Free Quote</a>
   </div>
 </header>
+
+
+
 
 <!-- ================= MAIN CONTENT ================= -->
 
