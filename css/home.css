@@ -288,6 +288,11 @@ body {
   
 
 /* ================= CONTACT FORM ================= */
+
+.questionaire-primary-btn {
+  margin: 1rem;
+}
+
 .contact-section {
   padding: 80px 60px 120px 60px;
   text-align: center;
