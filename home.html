@@ -15,7 +15,10 @@
 
   <header class="navbar">
     <div class="nav-left">
-      <img src="images/adb-blue-transparent.png" class="logo" />
+      <a href="home.html" class="logo-link">
+        <img src="images/adb-blue-transparent.png" class="logo" alt="AdBoostory Home" />
+      </a>
+      
     </div>
   
     <!-- Hamburger button -->
@@ -93,8 +96,11 @@
 
     <h2 class="contact-title">Contact us</h2>
 
-    <p class="contact-subtext">Send us your message, we’ll reply within 24 hours.</p>
+    <p class="contact-subtext">Send us your message, we’ll reply within 24 hours. <br> Or fill out a questionnaire for a custom quote.</p>
+    
+    <a href="questionnaire.html" class="btn-primary">Get A Custom Quote</a>
   
+    
     <form id="contactForm"
 
       action="https://formsubmit.co/marketing.adboostory@gmail.com"
@@ -103,7 +109,7 @@
       <!-- FormSubmit hidden fields -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">   
+      <input type="hidden" name="_next" value="adboostory.com/thank-you.html">   
       <input type="text" name="Full Name" placeholder="Full Name" required />
       <input type="email" name="Email" placeholder="Email Address" required />
       <textarea name="Message" placeholder="Your Message & Contact Information" required></textarea>    
