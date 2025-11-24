@@ -289,8 +289,9 @@ body {
 
 /* ================= CONTACT FORM ================= */
 
-.questionaire-primary-btn {
-  margin: 1rem;
+#contactForm
+ {
+  padding-top: 3rem;
 }
 
 .contact-section {
