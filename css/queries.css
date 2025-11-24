@@ -1,0 +1,272 @@
+
+/* Mobile media query*/
+
+/* ================= RESPONSIVE LAYOUT ================= */
+
+/* ---------- Large tablet / small laptop ---------- */
+@media (max-width: 1024px) {
+    .navbar {
+      padding: 18px 32px;
+    }
+  
+    .hero {
+      padding: 120px 32px 80px;
+    }
+  
+    .hero-left h1 {
+      font-size: 3.2rem;
+    }
+  
+    .card-stack {
+      width: 380px;
+      height: 440px;
+    }
+  }
+  
+  /* ---------- Tablet & mobile ---------- */
+  @media (max-width: 768px) {
+  
+    /* NAV & HAMBURGER */
+    /* base hamburger icon (hidden on desktop) */
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    padding: 4px;
+    display: none;               /* shown only in media query */
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .nav-toggle span {
+    width: 26px;
+    height: 3px;
+    border-radius: 999px;
+    background: #2721f6;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+  
+  /* when nav is open, animate into "X" */
+  .nav-open .nav-toggle span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .nav-open .nav-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-open .nav-toggle span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+    .navbar {
+      padding: 14px 20px;
+    }
+  
+    .nav-center {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #000;
+      padding: 16px 20px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      transition: max-height 0.25s ease, opacity 0.25s ease;
+    }
+    
+  
+    .nav-center a {
+      font-size: 0.98rem;
+    }
+  
+    .contact-btn {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Show hamburger, hide inline nav until opened */
+    .nav-toggle {
+      display: flex;
+    }
+  
+    /* When checkbox is checked, show menu */
+    .nav-checkbox:checked ~ .nav-center,
+    .nav-checkbox:checked ~ .nav-right {
+      max-height: 260px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  
+   
+  
+  
+    
+  
+    /* Animate hamburger into an “X” */
+    .nav-checkbox:checked + .nav-toggle span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+  
+    .nav-checkbox:checked + .nav-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .nav-checkbox:checked + .nav-toggle span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    /* HERO LAYOUT */
+    .hero {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 100px 24px 60px;
+      gap: 40px;
+    }
+  
+    .hero-left,
+    .hero-right {
+      width: 100%;
+    }
+  
+    .hero-left p {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .cta-group {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .btn-primary,
+    .btn-outline {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* Card stack sizes */
+    .card-stack {
+      width: 100%;
+      max-width: 420px;
+      height: 360px;
+    }
+  
+    .stack-card {
+      width: 70%;
+      height: 260px;
+    }
+  
+    .card-1 { top: 0; left: 8%; }
+    .card-2 { top: 40px; left: auto; right: 8%; }
+    .card-3 { top: 140px; left: 18%; }
+  
+    /* “Carousel” row – photos side by side, slightly cut off */
+    .scroll-loop-gallery {
+      padding: 40px 0 20px;
+      overflow-x: auto;
+      overflow-y: visible;
+    }
+  
+    .scroll-loop-gallery::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .gallery-track {
+      padding: 0 40px;
+      gap: 24px;
+      scroll-snap-type: x mandatory;
+    }
+  
+    .g-card {
+      width: 70vw;              /* wider than screen so edges are cut */
+      max-width: 320px;
+      scroll-snap-align: center;
+    }
+  
+    /* CONTACT SECTION */
+    .contact-section {
+      padding: 80px 24px 100px;
+    }
+  }
+  
+  /* ---------- Small phones ---------- */
+  @media (max-width: 480px) {
+    .hero-left h1 {
+      font-size: 2.4rem;
+    }
+  
+    .navbar {
+      padding: 10px 16px;
+    }
+  
+    .card-stack {
+      max-width: 360px;
+      height: 320px;
+    }
+  
+    .stack-card {
+      width: 78%;
+      height: 230px;
+    }
+  
+    .contact-title {
+      font-size: 2rem;
+    }
+  
+    footer {
+      padding: 24px;
+      font-size: 0.85rem;
+    }
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 14px 20px;
+    }
+  
+    /* show hamburger on mobile */
+    .nav-toggle {
+      display: flex;
+    }
+  
+    /* stack nav links in a dropdown */
+    .nav-center {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: #000;
+      padding: 16px 20px 20px;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      pointer-events: none;
+      transition: max-height 0.25s ease, opacity 0.25s ease;
+    }
+  
+    /* hide big quote button on mobile */
+    .nav-right {
+      display: none;
+    }
+  
+    /* when nav is open (body has .nav-open) */
+    .nav-open .nav-center {
+      max-height: 260px;
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+  
