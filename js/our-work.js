@@ -71,3 +71,14 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   });
   
+
+
+  // ===== mobile nav toggle =====
+const navToggleBtn = document.getElementById('navToggle');
+const bodyEl = document.body;
+
+if (navToggleBtn) {
+  navToggleBtn.addEventListener('click', () => {
+    bodyEl.classList.toggle('nav-open');
+  });
+}

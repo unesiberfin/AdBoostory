@@ -54,3 +54,13 @@ if (marqueeTrack) {
   // Match animation distance to the width of the original set for a seamless loop
   marqueeTrack.style.setProperty("--marquee-span", `${originalWidth}px`);
 }
+
+// ===== mobile nav toggle =====
+const navToggleBtn = document.getElementById('navToggle');
+const bodyEl = document.body;
+
+if (navToggleBtn) {
+  navToggleBtn.addEventListener('click', () => {
+    bodyEl.classList.toggle('nav-open');
+  });
+}
