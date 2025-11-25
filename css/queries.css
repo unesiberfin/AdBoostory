@@ -289,4 +289,117 @@
   }
   
   
+  
+
+
+/*  our work */
+
+
+  /* ========== HAMBURGER BASE (hidden on desktop) ========== */
+
+.nav-toggle {
+  display: none;              /* will be flex on mobile */
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 4px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.nav-toggle span {
+  width: 26px;
+  height: 3px;
+  border-radius: 999px;
+  background: #2721f6;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* animate into an “X” when body has .nav-open */
+.nav-open .nav-toggle span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-open .nav-toggle span:nth-child(2) {
+  opacity: 0;
+}
+.nav-open .nav-toggle span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
+
+/* ================= OUR WORK PAGE ================= */
+
+/* Large tablets / laptops */
+@media (max-width: 1024px) {
+  .portfolio-section {
+    padding: 120px 3rem 80px;
   }
+
+  .portfolio-header h1 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Tablets and mobiles */
+@media (max-width: 768px) {
+  /* Navbar adjustments already handled above */
+
+  .portfolio-section {
+    padding: 110px 1.5rem 3rem;
+  }
+
+  .portfolio-header {
+    text-align: center;
+  }
+
+  .portfolio-header h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .portfolio-header p {
+    font-size: 1rem;
+    margin: 0 auto 1.5rem;
+    max-width: 520px;
+  }
+
+  .carousel-viewport {
+    height: 420px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .portfolio-card {
+    width: 75vw;
+    max-width: 340px;
+    scroll-snap-align: center;
+  }
+
+  .carousel-arrow {
+    display: none; /* hide arrows, rely on swipe */
+  }
+
+  .nav-right {
+    display: none; /* hide quote button on mobile */
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .portfolio-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .portfolio-card {
+    width: 80vw;
+    max-width: 300px;
+  }
+
+  .portfolio-section {
+    padding: 100px 1.2rem 2.5rem;
+  }
+}
+
+}
