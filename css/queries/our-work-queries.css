@@ -1,33 +1,10 @@
 /* ================= OUR WORK PAGE RESPONSIVE ================= */
 
-/* ---------- Large tablets / small laptops ---------- */
+/* ---------- Stacked layout for ≤ 1024px ---------- */
 @media (max-width: 1024px) {
 
-  /* Remove horizontal scrolling behavior */
-  .carousel-viewport {
-    overflow: visible;
-    height: auto;
-  }
-
-  .carousel-track {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    transform: none !important;
-  }
-
-  .carousel-arrow {
-    display: none;
-  }
-
-  .portfolio-card {
-    width: 100%;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
   .portfolio-section {
-    padding: 110px 2rem 3rem;
+    padding: 120px 1.5rem 3rem;
   }
 
   .portfolio-header {
@@ -35,70 +12,108 @@
     margin-bottom: 2rem;
   }
 
-  .portfolio-header h1 {
+  .portfolio-header .work-title {
     font-size: 2rem;
     line-height: 1.3;
   }
 
-  .portfolio-header p {
+  .portfolio-header .work-subtitle {
     margin: 0 auto;
     max-width: 540px;
     font-size: 1.05rem;
   }
+
+  .portfolio-carousel-shell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  /* No fixed-height carousel, just a normal container */
+  .carousel-viewport {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    overflow: visible;
+  }
+
+  .portfolio-carousel-track {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    transform: none !important;
+    perspective: none;
+  }
+
+  /* No arrows */
+  .carousel-arrow {
+    display: none;
+  }
+
+  /* ✅ Plain stacked cards */
+  .portfolio-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 640px;
+    height: 420px;          /* adjust if you want taller/shorter */
+    margin: 0 auto;
+    transform: none !important;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .portfolio-card-inner {
+    height: 100%;
+    border-radius: 28px;
+  }
 }
 
-
-/* ---------- Tablets & mobile ---------- */
+/* ---------- Tablets & mobile tweaks (≤ 768px) ---------- */
 @media (max-width: 768px) {
 
   .portfolio-section {
-    padding: 100px 1.5rem 2.5rem;
+    padding: 110px 1.25rem 2.5rem;
   }
 
-  .portfolio-card {
-    max-width: 480px;
-  }
-
-  .portfolio-header h1 {
+  .portfolio-header .work-title {
     font-size: 1.8rem;
   }
 
-  .portfolio-header p {
+  .portfolio-header .work-subtitle {
     font-size: 1rem;
-    max-width: 480px;
+    max-width: 460px;
   }
 
-  /* Vertical layout reinforced */
-  .carousel-track {
+  .portfolio-card {
+    max-width: 520px;
+    height: 400px;
+  }
+
+  .portfolio-carousel-track {
     gap: 1.75rem;
-  }
-
-  @media (max-width: 768px) {
-    .hero-right {
-      display: none;
-    }
-  
-    /* Stretch hero-left to full width */
-    .hero-left {
-      width: 100%;
-      text-align: center;
-    }
   }
 }
 
-
-/* ---------- Small phones ---------- */
+/* ---------- Small phones (≤ 480px) ---------- */
 @media (max-width: 480px) {
 
   .portfolio-section {
-    padding: 90px 1.25rem 2.25rem;
+    padding: 100px 1rem 2.25rem;
+  }
+
+  .portfolio-header .work-title {
+    font-size: 1.55rem;
   }
 
   .portfolio-card {
     max-width: 100%;
-  }
-
-  .portfolio-header h1 {
-    font-size: 1.5rem;
+    height: 380px;
   }
 }

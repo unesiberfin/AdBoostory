@@ -75,13 +75,32 @@ h1 {
     letter-spacing: 1px;
     color: white;
     margin-top: 200px;
-    width: 40vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40vw; 
     line-height: 1.1;
     padding-bottom: 1rem;
     text-transform: uppercase;
 }
+
+.portfolio-header {
+  text-align: center !important;
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-header h1.work-title {
+  width: auto !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.portfolio-header .work-subtitle {
+  margin: 0 auto;
+  max-width: 60vw;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
 
 .portfolio-section {
   /* extra top padding so it sits below the fixed navbar */
@@ -99,10 +118,11 @@ h1 {
 
 .portfolio-carousel-shell {
   display: flex;
-
-  align-items: center;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0; /* remove extra spacing that pushes cards */
+  width: 100%;
+  margin: 0 auto;
 }
 
 .carousel-arrow {
@@ -124,19 +144,24 @@ h1 {
     box-shadow 0.2s ease;
 }
 
+
+
 .carousel-arrow:hover {
   background: #2721f6;
   transform: translateY(-1px);
   box-shadow: 0 22px 45px rgba(39, 33, 246, 0.6);
 }
 
+
 .carousel-viewport {
-  position: relative;
+  height: 720px; /* bigger images */
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 980px;
-  height: 460px;
-  overflow: visible;
+  margin-right: 40px;
+  
 }
+
 
 .portfolio-carousel-track {
   position: relative;
@@ -214,40 +239,7 @@ h1 {
   opacity: 0.9;
 }
 
-/* Responsive tweaks */
 
-@media (max-width: 900px) {
-  .carousel-viewport {
-    height: 430px;
-  }
-
-  .portfolio-card {
-    width: min(80vw, 360px);
-  }
-}
-
-@media (max-width: 640px) {
-  .portfolio-section {
-    padding-bottom: 3rem;
-  }
-
-  .portfolio-header {
-    text-align: left;
-  }
-
-  .portfolio-title {
-    font-size: 1.25rem;
-  }
-
-  .carousel-arrow {
-    display: none; /* on mobile we can rely on drag */
-  }
-
-  .carousel-viewport {
-    max-width: 100%;
-    height: 420px;
-  }
-}
 
 /* ================= FOOTER ================= */
 footer {
@@ -265,3 +257,5 @@ footer {
   margin: 0 10px;
   text-decoration: none;
 }
+
+
