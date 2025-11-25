@@ -68,6 +68,21 @@ body {
 
 /* ================= PORTFOLIO CAROUSEL ================= */
 
+h1 {
+    font-family: "Inter", serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 200px;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.1;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
 .portfolio-section {
   /* extra top padding so it sits below the fixed navbar */
   padding: 140px 4em 4rem;
