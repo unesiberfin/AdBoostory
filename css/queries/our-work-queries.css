@@ -80,6 +80,8 @@
 
   .portfolio-section {
     padding: 110px 1.25rem 2.5rem;
+    height: 100%;
+    
   }
 
   .portfolio-header .work-title {

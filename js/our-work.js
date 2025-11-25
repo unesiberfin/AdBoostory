@@ -23,7 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const x = offset * baseX;
   
         const scale = 1 - Math.min(abs * 0.15, 0.45); // 1, 0.85, 0.7...
-        const opacity = abs > 2 ? 0 : 1 - abs * 0.25;
+        const opacity = abs >= 2 ? 0 : 1 - abs * 0.25;
+
   
         card.style.transform = `translateX(${x}px) scale(${scale})`;
         card.style.zIndex = String(100 - abs);

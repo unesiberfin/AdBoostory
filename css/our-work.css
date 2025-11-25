@@ -154,18 +154,17 @@ h1 {
 
 
 .carousel-viewport {
-  height: 720px; /* bigger images */
+  height: 700px; /* bigger images */
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
   margin-right: 40px;
-  
 }
 
 
 .portfolio-carousel-track {
   position: relative;
-  width: 75%;
+  width: 570px;
   height: 100%;
   transform-style: preserve-3d;
   perspective: 1600px;
@@ -177,7 +176,7 @@ h1 {
   position: absolute;
   top: 0;
   left: 50%;
-  width: min(70vw, 380px);
+  width: min(80vw, 450px);
   height: 100%;
   transform: translateX(-50%);
   opacity: 0;
