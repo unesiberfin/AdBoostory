@@ -24,11 +24,30 @@
       gap: 40px;
     }
   
-    .hero-left,
-    .hero-right {
+    .hero-left{
       width: 100%;
     }
   
+    .hero-right{
+    display: none;
+    }
+    .hero-right {
+      display: none;
+    }
+  
+    /* expand hero-left to full width */
+    .hero-left {
+      width: 100%;
+      text-align: center;
+    }
+  
+    /* FIX THE GAP — reset hero height */
+    .hero {
+      height: auto;
+      min-height: unset;
+      padding-bottom: 40px; /* optional, looks cleaner */
+    }
+
     .cta-group {
       flex-direction: column;
       align-items: stretch;
@@ -66,5 +85,7 @@
     .hero-left h1 {
       font-size: 2.4rem;
     }
+
+  
   }
   
