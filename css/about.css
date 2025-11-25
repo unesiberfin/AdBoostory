@@ -85,7 +85,74 @@
     box-shadow: 0 0 15px rgba(39, 33, 246, 0.4);
   }
   
-  
+  /* Mission vision  */
+
+  /* ====== Mission & Vision ====== */
+.mission-vision {
+  padding: 60px 10% 60px;
+  background-color: #000;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.mv-inner {
+  max-width: 960px;
+  width: 100%;
+}
+
+.mv-intro h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.mv-intro p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  max-width: 640px;
+  margin-top: 6px;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.mv-card {
+  background: rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 28px 24px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+
+.mv-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mv-card p {
+  font-size: 0.96rem;
+  line-height: 1.7;
+  color: #dcdcdc;
+  align-content: center;
+}
+
+.mv-inner h2 {
+  font-family: "Inter", serif;
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    margin: 20px auto;
+    line-height: 1.1;
+
+}
+
   /* =======================
      MARQUEE SLIDER
   ======================= */

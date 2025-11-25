@@ -25,6 +25,9 @@
   
   /* ---------- Tablet & mobile ---------- */
   @media (max-width: 768px) {
+
+
+    /* Home */
   
     /* NAV & HAMBURGER */
     /* base hamburger icon (hidden on desktop) */
@@ -268,5 +271,22 @@
       opacity: 1;
       pointer-events: auto;
     }
+  
+  
+
+  /* About */
+    
+  .mission-vision {
+    padding: 50px 7% 50px;
   }
   
+  .mv-intro h2 {
+    font-size: 2rem;
+  }
+  
+  .mv-intro p {
+    max-width: none;
+  }
+  
+  
+  }
