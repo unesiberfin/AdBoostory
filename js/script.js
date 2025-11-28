@@ -27,6 +27,40 @@ if (navToggleBtn) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".faq-item");
+
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    button.addEventListener("click", () => {
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      // Close all others (accordion behaviour)
+      faqItems.forEach((otherItem) => {
+        const otherButton = otherItem.querySelector(".faq-question");
+        const otherAnswer = otherItem.querySelector(".faq-answer");
+
+        otherButton.setAttribute("aria-expanded", "false");
+        otherItem.classList.remove("is-open");
+        otherAnswer.hidden = true;
+      });
+
+      // Toggle current
+      if (!isOpen) {
+        button.setAttribute("aria-expanded", "true");
+        item.classList.add("is-open");
+        answer.hidden = false;
+      } else {
+        button.setAttribute("aria-expanded", "false");
+        item.classList.remove("is-open");
+        answer.hidden = true;
+      }
+    });
+  });
+});
+
 // Contact form
 
 // Initialize EmailJS

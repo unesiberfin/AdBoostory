@@ -384,7 +384,114 @@ html {
   display: none;
 }
 
+/* ================= FAQ SECTION ================= */
 
+.faq-section {
+  padding: 80px 10%;
+  background: #000;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.faq-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: #b8b8ff;
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+/* FAQ container */
+.faq-items {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Each FAQ card */
+.faq-item {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Question button */
+.faq-question {
+  width: 100%;
+  padding: 18px 22px;
+  border: none;
+  outline: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  color: #fff;
+  text-align: left;
+}
+
+.faq-question span:first-child {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Icon */
+.faq-icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+/* Answer content */
+.faq-answer {
+  padding: 0 22px 18px 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.faq-answer p {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #e5e5e5;
+}
+
+.faq-answer a {
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+.faq-answer a:hover {
+  text-decoration: underline;
+}
+
+/* Hover + active state */
+.faq-item:hover {
+  transform: translateY(-2px);
+  border-color: #ffffff;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Expanded state */
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg); /* turns + into x-ish */
+}
  
 /* ================= FOOTER ================= */
 footer {

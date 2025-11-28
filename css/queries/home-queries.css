@@ -85,7 +85,24 @@
     .hero-left h1 {
       font-size: 2.4rem;
     }
-
   
+    .faq-section {
+      padding: 60px 6%;
+    }
+  
+    .faq-title {
+      font-size: 2rem;
+    }
+  
+    .faq-question {
+      padding: 16px 16px;
+    }
+  
+    .faq-answer {
+      padding: 0 16px 16px 16px;
+    }
+    
   }
-  
+
+ 
+
