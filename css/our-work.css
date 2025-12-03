@@ -48,8 +48,7 @@ body {
   position: relative;
 }
 
-.nav-center a:hover,
-.nav-center a.active {
+.nav-center a:hover,{
   color: #2721f6;
 }
 

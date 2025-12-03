@@ -42,10 +42,47 @@ body {
   position: relative;
 }
 
-.nav-center a:hover,
-.nav-center a.active {
+
+
+
+/* Base links */
+.nav-center a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px; /* space for underline animation */
+}
+
+/* Underline animation */
+.nav-center a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background: #2721f6;
+  transition: width 0.3s ease;
+}
+
+/* Hover triggers the underline */
+.nav-center a:hover::after {
+  width: 100%;
+}
+
+/* Active link always shows underline */
+.nav-center a.active::after {
+  width: 100%;
+}
+
+/* Active/hover text color */
+.nav-center a:hover, {
   color: #2721f6;
 }
+
+
+
 
 .contact-btn {
   color: #efefef;
