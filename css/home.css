@@ -43,7 +43,9 @@ body {
 }
 
 
-
+.nav-center a.active {
+  color: #2721f6;
+}
 
 /* Base links */
 .nav-center a {
@@ -109,7 +111,7 @@ body {
 }
 
 .hero-left {
-  width: 50%;
+  width: 60%;
 }
 
 .hero-left h1 {
